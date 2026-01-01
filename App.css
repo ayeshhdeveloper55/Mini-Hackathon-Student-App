@@ -1,0 +1,176 @@
+/* Custom Styles */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-gradient {
+  background: var(--primary-gradient) !important;
+}
+
+.navbar {
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.card-header {
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.btn-success {
+  background: var(--secondary-gradient);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #d87fe8 0%, #e0455a 100%);
+}
+
+.student-card {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border: 2px solid #e0e0e0;
+}
+
+.student-photo-placeholder {
+  border: 3px solid #667eea;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.university-header h2 {
+  color: #2c3e50;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.barcode {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+}
+
+/* Form styles */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  transform: translateY(-1px);
+}
+
+.form-label {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Course cards */
+.course-card {
+  height: 100%;
+}
+
+.course-card .card-header {
+  font-size: 0.9rem;
+}
+
+.course-card .card-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Animation classes */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .student-card {
+    margin: 0 10px;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .btn-group .btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar, .btn-group, .text-center.mb-4 {
+    display: none !important;
+  }
+  
+  .student-card {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: white !important;
+  }
+}
